@@ -1,0 +1,115 @@
+/* Styles for sections and cards */
+.page-container.hook {
+  /* background-color: var(--clr-accent); */
+  padding: 3% 0;
+  /* background-color: var(--clr-primary); */
+}
+
+.hook .page-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Change from visible to auto for horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scrolling */
+}
+
+.hook .container {
+  display: flex;
+  justify-content: center;
+}
+
+.hook .card-scroll-container {
+  /* Scroll styles */
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden; /* Hide vertical scrolling */
+}
+
+.hook .card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-snap-align: start; /* Added for card alignment */
+  padding: 0;
+  margin: 0;
+  border-radius: 28px;
+}
+
+.hook .section {
+  width: 100vw;
+  height: 300px; /* Adjust as needed */
+}
+
+.icon-and-one-line {
+  flex: 1;
+  background-color: #47455432;
+  
+  color: var(--clr-secondary);
+  padding: 9%;
+  margin: 3%;
+  border-radius: 28px;
+  box-shadow: var(--box-shadow10);
+  width:280px; /* Adjust as needed */
+  height: 280px; /* Adjust as needed */
+  overflow: hidden;
+  scroll-snap-align: start; /* Added for card alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hook .row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hook img {
+  margin-right: 6%;
+}
+
+.hook .card-sub-title, .hook .details {
+  color: var(--clr-secondary); 
+}
+
+.card-container.box-shadow {
+  height: 300px;
+  width: 300px;
+  color: var(--shd-02);
+  box-shadow: var(--box-shadow10);
+}
+
+/* Responsive styles for screens 40em and under */
+@media (max-width: 40em) {
+  .hook .page-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .hook .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .hook .card-container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .hook .card {
+    flex: 0 0 300px;
+    height: 300px;
+    margin-right: 10px;
+    scroll-snap-align: start;
+  }
+}

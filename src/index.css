@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+:root {
+
+  /* Text */
+
+  /* Fonts */
+  --ff-primary: "Red Hat Text", sans-serif;
+  --ff-secondary: "Inter Tight", sans-serif;
+  --ff-accent: "Assistant", sans-serif;
+
+  /* Text Levels */
+  --text-level-micro: clamp(10px, 3vw, 14px);
+  --text-level-small: clamp(12px, 3.5vw, 16px);
+  --text-level-medium: clamp(14px, 4vw, 18px);
+  --text-level-large: clamp(16px, 4.5vw, 22px);
+  --text-level-xlarge: clamp(18px, 5vw, 28px);
+  --text-level-xxlarge: clamp(20px, 5.5vw, 32px);
+
+  /* ------------------------------------- */
+
+
+  /* Colors */
+
+  /* Main Palette */
+  --clr-primary-dark: rgb(24, 24, 24);
+  --clr-primary: #1d1d1d;
+  --clr-secondary: #FAF8FF;
+  --clr-sheer: #47455432;
+  --clr-sheer2: #413f4f3c;
+  --clr-neutral:#787586;
+  --clr-neutral-100: rgba(197, 197, 197, 0.587);
+  --clr-accent2:#00C896;
+  --clr-accent: #00C6CF;
+  --clr-accent3: #5B4858;
+
+  --clr-gray-500: #2B2B2B;
+  --clr-gray-400: #505050;
+  --clr-gray-300: #787878;
+  --clr-gray-200: #A3A3A3;
+  --clr-gray-100: #D0D0D0;
+
+  --shd-01: #45474B;
+  --shd-02: #5B666D;
+  --shd-03: #71888E;
+  --shd-04: #89ABAA;
+  --shd-05: #A9CEC2;
+
+
+
+  /* Backgrounds */
+
+  --bg-light: rgba(128, 128, 128, 0.3236);
+  --bg-dark: rgba(43, 43, 43, 0.618);
+  --bg-accent: rgba(128, 0, 128, 0.1618);
+  --soft-white: #f8f8f8;
+
+
+  /* Shaddows & Effects */
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+  --pro-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow10: 13px -8px 1px #f8f8f82e;
+  --background-gradient: radial-gradient(ellipse at center, #03142e 0%, #c3932298 30%, #D4AF37 60%, #B5891F 100%);
+  /* --accent-golden-line:linear-gradient(90deg, #F1D666 0%, #F0DE70 13%, #E6AA29 26%, #E6AA29 39%, #E6AA29 54%, #F8F893 60.5%, #F6F48D 66.5%, #F8F893 72.5%, #F7F58F 80%, rgba(211, 167, 75, 0.81) 87%, #CC9C45 97%; */
+
+  /* Borders and Lines */
+  --border-radius: 28px;
+
+
+  /* ------------------------------------- */
+
+}
+
+/* Project Reset Code  */
+/*Every project setting (EPS)*/
+
+*,
+*::before,
+*::after,
+html {
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+}
+
+/* ------------------------------------- */
+
+/* Text Levels */
+
+body,
+h1,
+h2,
+h3,
+{
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1.3215rem;
+  line-height: 1.6;
+  color: var(--clr-secondary);
+  background-color: var(--clr-primary-dark);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(10rem, calc (1rem +20vw), 16rem);
+}
+
+.title {
+  font-size: clamp (3rem, calc(1rem+10vw), 7rem);
+  text-align: left;
+  color: var(--clr-accent);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.steel {
+  color: var(--shd-03);
+}
+
+.blue {
+  color: var(--shd-04);
+}
+
+.greenish {
+  color: var(--shd-02);
+}
+
+
+* a {
+text-decoration: none;
+color: white;
+font-size: var(--text-level-small);
+text-transform: uppercase;
+padding: 3% 0;
+}
+
+.page-sub-title {
+  display: flex;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--shd-02);
+  font-weight: bold;
+  padding: 6% 0 3% 0;
+}
+
+.link {
+  font-family: var(--ff-primary);
+  font-size: var(--text-level-micro);
+  color: var(--ff-secondary);
+  text-decoration: none;
+
+
+}
+
+@media (min-width: 40em) {
+  font-size: clamp (2rem, calc(2rem+10vw), 7rem);
+
+}
+
+
+h2,
+h3 {
+  color: var (--clr-accent);
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------------------------- */
+
+
+/* Colors */
+
+/* Background Colors */
+.bg-primary {
+  color: var(--clr-neutral-100);
+  background-color: var(--soft-white);
+}
+
+
+/* ------------------------------------- */
+
+
+/* Images  */
+img {
+  /* display: block; */
+  /* max-width: 100%; */
+  /* object-fit: contain; */
+  /* list-style: none; */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+.background-image {
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  max-width: 160px !important;
+  justify-self: center;
+  align-self: center;
+  margin: 8px 0;
+  /* Adjust the margin to decrease space from the image */
+  position: relative;
+}
+.logo img {
+  padding-top: 12%;
+}
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* ------------------------------------- */
+
+
+/* Containers  */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  /* This allows content to wrap onto new lines if it doesn't fit within the container width */
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100vw;
+  height: auto;
+  padding: 2% 0;
+  overflow:hidden;
+}
+
+.page-container.app-container{
+  padding: 0;
+}
+
+#super-title{
+  padding: 0;
+}
+
+.container {
+  container-type: inline-size;
+  padding: 3%;
+  width: min(90%, 70.5rem);
+  display: flex;
+  gap: 2em;
+}
+
+.narrow {
+  text-align: center;
+  padding: 3%;
+}
+
+
+/* Side-by-side */
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  color: white;
+  
+
+}
+
+.bottom-sections {
+  display: flex;
+  place-content: center;
+  flex: 1;
+  flex-direction: row;
+}
+
+.bottom-section {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.sheer-container{
+  /* background-color: var(--clr-sheer); */
+  border-radius: 28px;
+  padding: 3%;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .bottom-sections {
+    flex-direction: column;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  /*Ensure breakpoint is observed before setting amount of ems*/
+  .split,
+  .container {
+    display: flex;
+    /*No need for desktop setting*/
+    flex-direction: column;
+    /* gap: 2em; */
+    /*No need for desktop setting*/
+    /* display: block; This is an alternate setting that overides default and could also be set to initial */
+  }
+
+  .logo {
+    max-width: 72px !important;
+    justify-self: center;
+    align-self: center;
+    /* margin: 2px 0; */
+    /* Adjust the margin to decrease space from the image */
+    position: relative;
+  }
+  .logo img {
+    /* padding-top: %; */
+  }
+
+}
+
+/* ------------------------------------- */
+
+/* Document Formatting  */
+
+/* Aligns items vertically within a column */
+.column {
+  display: flex;
+  /* Establishes flexbox layout */
+  flex-direction: column;
+  /* Arranges items in a vertical column */
+  text-align: left;
+  /* Aligns text content to the left */
+}
+
+/* Aligns items horizontally within a row */
+.row {
+  display: flex;
+  /* Establishes flexbox layout */
+  flex-direction: row;
+  /* Arranges items in a horizontal row */
+  text-align: left;
+  /* Aligns text content to the left */
+}
+
+.shadow-box {
+  width: 300px;  /* Set the width as needed*/
+  height: 300px;  /* Set the height as needed*/
+  background-color: var(--shd-05);  /* Set the background color as needed*/
+  box-shadow: var(--clr-sheer2);
+
+}
+
+
+
+/* ------------------------------------- */
+
+
+/* Cards */
+.small-card {}
+
+.medium-card {}
+
+.large-card {}
+
+/* Card Styles */
+
+.card-div.row {
+  width: 100%;
+  padding: 6%;
+}
+
+
+.card {
+  flex: 0 0 auto;
+  /* Prevent flex growth and shrink */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 480px;
+  margin: 8px;
+  padding: 3%;
+  box-shadow: var(--box-shadow);
+  color: var(--ff-primary);
+}
+
+
+.card,
+{
+box-shadow: var(--box-shadow);
+border-radius: 28px;
+background-color: white;
+}
+
+.photo,
+.text,
+.button,
+.InquiryButton,
+.scroll-buttons {
+  box-shadow: var(--box-shadow);
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc(33.33% - 20px);
+  /* Updated value */
+  min-width: 300px;
+  max-width: 100%;
+  /* margin: 32px; */
+}
+
+.card-container-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* Change to space-around */
+  align-items: center;
+  margin: 1%;
+  flex-grow: 1;
+}
+
+.card-image-medium {
+  max-width: 40px !important;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-90deg);
+  margin: 2px 0;
+  /* Adjust the margin to decrease space from the image */
+  position: relative;
+}
+
+
+.card-heading {
+  text-align: center;
+  padding: 3% 3% 0% 3%;
+}
+
+.card-heading img {
+  place-items: center;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.card-title {
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  color: var(--accent-golden);
+  font-size: var(--text-level-large);
+  /* border-bottom: 1px solid #B5891F; */
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-weight: 300;
+}
+
+.card-sub-title {
+  font-family: var(--ff-accent);
+  /* font-size: var(--text-level-medium); */
+  /* text-transform: uppercase; */
+  /* color: #03142e; */
+  color: var(--clr-secondary);
+  letter-spacing: .12ch;
+  font-weight: bold;
+  text-align: left;
+  padding: 3% 0%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Change to space-between */
+  align-items: center;
+  text-align: left;
+  height: 100%;
+  font-weight: light;
+  color: var(--clr-secondary);
+  /* padding-bottom:s 2%; */
+}
+
+/* ------------------------------------- */
+
+
+/* Sections */
+
+/* Text/Body*/
+
+.text-center {
+  text-align: center;
+}
+
+.icon-and-one-line {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+
+
+}
+
+/* ------------------------------------- */
+
+
+/* Buttons */
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Align items at the bottom */
+  margin: 8px 8px 8px 8px;
+}
+
+.button {
+  padding: 12px 24px;
+  border: 3px solid var(--shd-03);
+  border-radius: 28px;
+  color: white;
+  color: var(--clr-secondary);
+  font-family: var(--ff-primary);
+  font-size: var(--text-level-small);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  /* margin-top: auto; */
+}
+
+.InquiryButton {
+  padding: 10px 20px;
+  background-color: var(--clr-accent);
+  border: 1px solid var(--accent-light-golden);
+  border-radius: 28px;
+  color: white;
+  font-family: var(--ff-primary);
+  font-size: var(--text-level-micro);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto;
+}
+
+.scroll-buttons {
+  padding: 10px 20px;
+  background-color: var(--clr-sheer);
+  /* border: 1px solid var(--accent-light-golden); */
+  border-radius: 28px;
+  color: white;
+  font-family: var(--ff-secondary);
+  font-size: var(--text-level-micro);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+/* ---------------------Scroll Animation for Hero------------------------------ */
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 1rem;
+  background: var(--clr-sheer);
+  border-radius: 1rem;
+  /* box-shadow: var(--box-shadow); */
+}
+
+.scroller {
+  max-width: 100%;
+  padding: 1% 0;
+  /*important to have width*/
+  /* outline: 3px solid lime; */
+}
+
+.scroller__inner {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: .5rem;
+  /* padding-block: 1rem; */
+  /*important - left and rigth not so much but top and bottom vip*/
+}
+
+
+.scroller[data-animated=true] {
+  /* border: 5px solid lime; */
+  overflow: hidden;
+  /*This needs to happen for the animation to work properly*/
+  -webkit-mask:
+    /*This has to be used to render properly using chrome*/
+    linear-gradient(90deg,
+      transparent,
+      var(--clr-primary) 10%,
+      var(--clr-primary) 90%,
+      transparent);
+
+  mask: linear-gradient(90deg, transparent, var(--clr-primary)10%, var(--clr-primary) 90%, transparent);
+}
+
+.scroller[data-animated=true] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation:
+    scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction='right'] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-speed='slow'] {
+  --_animation-speed: 160s;
+}
+
+.scroller[data-speed='fast'] {
+  --_animation-duration: 5s;
+}
+
+.scroller[data-speed='left'] {
+  --_animation-duration: forwards;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - .5rem));
+    /*Scrolling left to right*/
+    /*transform: translate(-100%); will set scrolling in the oposite direction*/
+
+  }
+}
+
+/* --------------------------------------------------- */
+
+
+.button:hover, a:hover {
+  /* background-color: #03142e; */
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--shd-03);
+  border: none;
+  box-shadow: none;
+
+
+  /* border: 1px solid var(--accent-light-golden); */
+  transition: color 0.3s ease;
+}
+
+.InquiryButton:hover .button.active,
+.InquiryButton.active {
+  background-color: var(--clr-accent);
+  color: var(--accent-light);
+}
+
+/* ------------------------------------- */
+
+/* For Templates */
+
+.item {
+  --gap: 1rem;
+  width: 22rem;
+  height: 11rem;
+  color: var(--clr-accent);
+  background-color: var(--clr-neutral);
+  border-radius: 28px;
+  border: 3px dotted blue;
+  margin: var(--gap);
+}
+
+.parent {
+  display: flex;
+  padding: var(--gap);
+  flex-wrap: wrap;
+}
+
+.reel {
+  display: grid;
+  gap: .25rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 50%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: var(--gap);
+}
+
+.reel>* {
+  scroll-snap-align: start;
+}
+
+.flexible-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flexiblegrid>* {
+  flex: 1;
+}
+
+
+.auto-grid {
+  --min-column-size: 22rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns:
+    repeat(auto-fit,
+      minmax(min(var(--min-column-size), 100%), 1fr));
+}

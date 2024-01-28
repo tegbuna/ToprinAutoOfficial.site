@@ -1,0 +1,81 @@
+.page-container.fifty {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the start */
+  margin: 0;
+  padding: 0;
+}
+
+.fifty-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensure containers are spaced apart */
+  width: 100%;
+  padding: 0 1em; /* Adjust padding as needed */
+}
+
+.first-container, .second-container {
+  flex: 0 1 calc(50% - 1em); /* Set each container to take 50% width with padding */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.second-container {
+  order: 1; /* Reorder second container to appear after the first on mobile */
+}
+
+.HIWContainer {
+  /* Your existing styles */
+}
+
+.HIWContainer .bottom-sections {
+  display: flex;
+  justify-content: space-between; /* Ensure space between sections */
+  align-items: flex-start; /* Align items at the start */
+  width: 100%;
+  padding: 0 1em; /* Adjust padding as needed */
+}
+
+.HIWContainer .bottom-section.left-side {
+  flex: 1;
+  padding-right: 1em; /* Adjust padding as needed */
+}
+
+.HIWContainer .bottom-section.right-side {
+  flex: 1;
+  padding-left: 1em; /* Adjust padding as needed */
+}
+
+@media (max-width: 768px) {
+  .fifty-container {
+      flex-direction: column; /* Stack containers on top of each other */
+  }
+
+  .HIWContainer {
+    margin-top: 2em; /* Adjust margin-top as needed for separation */
+    /* Your existing styles */
+}
+
+/* Add the rest of your CSS styles here */
+
+
+  .first-container, .second-container {
+      flex: 0 1 100%; /* Full width stacking for smaller screens */
+      padding: 0; /* Remove padding to fit full width */
+  }
+
+  .second-container {
+      order: 2; /* Ensure second container appears after the first */
+  }
+
+  .HIWContainer .bottom-sections {
+      flex-direction: column; /* Stack sections on top of each other */
+      padding: 0; /* Remove padding to fit full width */
+  }
+
+  .HIWContainer .bottom-section.left-side,
+  .HIWContainer .bottom-section.right-side {
+      width: 100%; /* Full width stacking for smaller screens */
+      padding: 0; /* Remove padding to fit full width */
+  }
+}

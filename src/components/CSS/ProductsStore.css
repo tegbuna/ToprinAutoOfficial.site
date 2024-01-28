@@ -1,0 +1,48 @@
+.page-container.products {
+  background-color: var(--clr-sheer);
+
+}
+
+.medium-card {
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  width: 300px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+
+
+.medium-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.medium-card img {
+  width: 2400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+@media (max-width: 40em) {
+.reel {
+  gap: 4em;
+}
+}
+

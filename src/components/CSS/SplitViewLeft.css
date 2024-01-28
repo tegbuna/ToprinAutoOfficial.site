@@ -1,0 +1,86 @@
+/* SplitViewPage.css */
+.page-container.SplitViewLeft {
+display: flex;
+/* flex-direction: row; */
+}
+
+.split-view-page {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto a new line if needed */
+  }
+  
+  .left-section {
+    flex: 1;
+    min-width: 50%; /* Set a minimum width for the left section to maintain 50% split */
+    /* Add any styles for the left section */
+  }
+  
+  .right-section {
+    flex: 1;
+    min-width: 50%; /* Set a minimum width for the right section to maintain 50% split */
+    display: flex;
+    flex-direction: column; /* Stack child elements in a column */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cta-section {
+    text-align: center;
+    padding: 9%;
+  }
+  
+  .tag-line {
+    font-size: 2rem;
+    color: var(--clr-accent); /* Adjust the color as needed */
+  }
+  
+  .supporting-line {
+    font-size: 1.2rem;
+    color: var(--clr-secondary); /* Adjust the color as needed */
+  }
+  
+  .cta-button {
+    padding: 12px 24px;
+    background-color: var(--clr-accent);
+    border: 1px solid var(--accent-light-golden);
+    border-radius: 28px;
+    color: white;
+    font-family: var(--ff-secondary);
+    font-size: var(--text-level-micro);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 8px;
+    text-decoration: none;
+  }
+  
+  .cta-button:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: #caa95e;
+  }
+  
+  .ask-question-link {
+    color: var(--clr-accent); /* Adjust the color as needed */
+    margin-top: 8px;
+    display: block;
+    text-decoration: none;
+    font-size: var(--text-level-micro);
+  }
+  
+  .empty-container {
+    flex: 1;
+    /* Adjust any styles for the empty container */
+  }
+  
+  @media (max-width: 40em) {
+    .left-section,
+    .right-section {
+      min-width: 100%; /* Set to 100% to stack in a column */
+    }
+
+    .page-container.SplitViewLeft {
+      display: flex;
+      flex-direction: column;
+      }
+  }
+  

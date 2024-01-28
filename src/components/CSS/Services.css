@@ -1,0 +1,151 @@
+/* Styles for Services Container */
+.Services .page-container {
+  overflow-x: auto;
+}
+
+.page-container.Services {
+  /* background-color: var(--clr-sheer); */
+  padding-bottom: 3% 0;
+}
+
+.sub-title {
+  align-items: center;
+}
+
+.Services .grid-container {
+  display: flex;
+  gap: 10px;
+  /* Adjust the gap between cards if needed */
+  padding: 10px;
+  /* Adjust the container padding if needed */
+  justify-content: center;
+  /* Center the cards horizontally */
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.Services .medium-card {
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  /* Remove the fixed width and height */
+  min-width: 300px; /* Set a minimum width for the cards */
+  flex: 0 0 auto; /* Maintain the initial size of the cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Other existing styles */
+  border-radius: 28px;
+  overflow: hidden; /* Ensure overflow is hidden to contain the pseudo-element */
+}
+
+.Services .medium-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay color */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Ensure pseudo-element doesn't interfere with mouse events */
+}
+
+.Services .medium-card:hover::after {
+  opacity: 0.7; /* Adjust opacity for optimal contrast */
+}
+
+.Services .medium-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.Services .medium-card h3,
+.Services .medium-card .sub-title {
+  position: absolute;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  /* Center text horizontally */
+  top: 50%;
+  transform: translateY(-50%);
+  /* Center vertically */
+  z-index: 1; /* Ensure text remains above the overlay */
+  box-shadow: var(--box-shadow);
+}
+
+.card-title.service-title {
+  color: white;
+}
+
+.Services .medium-card .sub-title {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  /* padding: 3%; */
+}
+
+.Services .medium-card:hover .sub-title {
+  opacity: 1;
+}
+
+.Services .medium-card:hover h3 {
+  opacity: 0;
+}
+
+/* Responsive styles for screens 768px and above */
+@media (min-width: 768px) {
+  .Services .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the grid horizontally */
+    gap: 10px; /* Adjust the gap between cards if needed */
+    padding: 10px; /* Adjust the container padding if needed */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 1800px;
+    margin: 0 auto; /* Center the grid horizontally */
+  }
+
+  .Services .medium-card {
+    flex-basis: calc(33.33% - 10px); /* Set flex-basis for three columns */
+    max-width: calc(33.33% - 10px); /* Set max-width for three columns */
+    /* Adjust margin if needed */
+    /* Other existing styles */
+  }
+}
+
+/* Responsive styles for screens 768px and under */
+@media (max-width: 768px) {
+  .Services .grid-container {
+    flex-direction: row;
+    /* Force cards into a row */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+  }
+
+  .Services .medium-card {
+    min-width: 400px; /* Set a minimum width for the cards */
+    margin-right: 20px;
+    /* Other existing styles */
+  }
+
+  .Services .medium-card:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Add a media query for 40em screen size and under */
+@media (max-width: 40em) {
+  .Services .grid-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    transform: translateX(0%);
+    /* Force cards into a row */
+    /* You can add additional styles specific to 40em and under here if needed */
+    flex-wrap: nowrap; /* Add this line to prevent wrapping */
+  }
+}

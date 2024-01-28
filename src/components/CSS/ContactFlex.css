@@ -1,0 +1,56 @@
+.page-container.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--clr-sheer);
+}
+
+.first-container.contact{
+  padding:6%;
+}
+
+.contact img {
+    width: 900px /* Ensure the image covers its container */
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .first-container, .second-container {
+    flex: 0 1 calc(50% - 1.5em); /* Set each container to take 50% width with some padding */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    text-align: center; /* Center text content in containers */
+  }
+
+  .second-container {
+    margin: 1%;
+    padding: 0 6%;
+  }
+
+  .first-container {
+    background-image: cover;
+  }
+  
+  @media (max-width: 800px) {
+    .page-container.contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .first-container, .second-container {
+      flex: 0 1 100%; /* Full width stacking for smaller screens */
+      width: 100vw;
+    }
+  }
+  

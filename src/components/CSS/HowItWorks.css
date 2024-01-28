@@ -1,0 +1,99 @@
+.page-container.how-it-works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.hiw.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 3%;
+}
+
+.hiw-card-scroll-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: center; /* Center the cards vertically */
+  padding: 0 3%; /* Adjust padding as needed */
+  max-width: 960px; /* Added max-width to ensure the container doesn't exceed a certain width */
+}
+
+#card1,
+#card2,
+#card3,
+#card4 {
+  width: 300px;
+  height: 200px;
+  margin: 1%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 3% 2%;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#card1 {
+  border-radius: 28px 28px 0 28px;
+}
+
+#card2 {
+  border-radius:  28px 28px 28px 0;
+}
+
+#card3 {
+  border-radius:  28px 0 28px 28px ;
+}
+
+#card4 {
+  border-radius: 0 28px 28px 28px;
+}
+
+.hiw-how-it-works-card {
+  width: 230px;
+  height: 185px;
+  margin: 1%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border: 1px solid var(--shd-01);
+  padding: 6% 3%;
+  box-shadow: var(--box-shadow10);
+}
+
+.hiw-card-title {
+  text-align: center;
+  border-bottom: 1px solid var(--shd-01);
+  border-spacing: 2% 0;
+  font-weight: bold;
+  padding: 3%;
+  color: var(--shd-04);
+  font-size: var(--text-level-xlarge);
+}
+
+.hiw-details {
+  margin-top: 3%;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hiw-card-scroll-container {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    transform: translateX(0%);
+  }
+
+  #card1,
+  #card2,
+  #card3,
+  #card4 {
+    width: 300px;
+      border-radius: 28px;
+  }
+}

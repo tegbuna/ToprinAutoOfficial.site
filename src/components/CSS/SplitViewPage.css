@@ -1,0 +1,39 @@
+/* Common Styling */
+.split-view-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  overflow: scroll;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* SplitViewLeft Styling */
+.split-view-left .SplitViewLeft {
+  /* Add specific styling for SplitViewLeft if needed */
+}
+
+/* SplitViewRight Styling */
+.split-view-right .SplitViewRight {
+  /* Add specific styling for SplitViewRight if needed */
+}
+
+/* Common Styling for Left and Right Sections */
+.split-view-page-container .split-view-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  max-width: 1200px; /* Set the maximum width as needed */
+  margin: 0 auto; /* Center the content within the specified max-width */
+}
+
+/* Additional Styling for mobile view if needed */
+.split-view-page-container .right-section,
+.split-view-page-container .left-section {
+  width: 100%;
+  order: 1; /* Change order to switch positions on mobile */
+}

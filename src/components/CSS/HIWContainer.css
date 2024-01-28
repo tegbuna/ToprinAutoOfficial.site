@@ -1,0 +1,53 @@
+.HIWContainer {
+  /* Your existing styles */
+}
+
+.HIWContainer .bottom-sections {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.HIWContainer .bottom-section.left-side {
+  width: 100%;
+  padding: 0 3% 0 6%;
+
+  text-align: justify;
+  /* Adjust other styles as needed */
+}
+
+.HIWContainer .bottom-section.right-side {
+  width: 100%;
+  padding: 0 6% 0 0;
+  /* Adjust other styles as needed */
+}
+
+/* Media query for screens 768px and lower */
+@media (max-width: 768px) {
+  .HIWContainer .bottom-sections {
+      flex-direction: column;
+  }
+
+  .HIWContainer .bottom-section.left-side,
+  .HIWContainer .bottom-section.right-side {
+      width: 100%;
+      height: 100vh;
+      margin-bottom: 3em;
+  }
+
+  .HIWContainer .bottom-section.left-side {
+    width: 100%;
+    padding:6%;
+    text-align: justify;
+    order: 2;
+  }
+  
+  .HIWContainer .bottom-section.right-side {
+    width: 100%;
+    padding:0%;
+    margin: 0;
+    order: 1;
+  }
+}
