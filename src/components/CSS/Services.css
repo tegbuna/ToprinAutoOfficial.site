@@ -72,8 +72,7 @@
   transition: opacity 0.3s ease;
   text-align: center;
   /* Center text horizontally */
-  top: 50%;
-  transform: translateY(-50%);
+justify-content: flex-start;
   /* Center vertically */
   z-index: 1; /* Ensure text remains above the overlay */
   box-shadow: var(--box-shadow);

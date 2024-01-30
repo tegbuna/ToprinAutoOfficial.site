@@ -1,7 +1,5 @@
 import React from 'react';
 import "../components/CSS/Hero.css";
-import CtaButton from "../components/CtaButton";
-import SocialMBar from "../components/SocialMBar";
 import Main from "./Main";
 
 const Hero = () => {

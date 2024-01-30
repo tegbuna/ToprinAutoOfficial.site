@@ -30,13 +30,7 @@ const ProductsStore = ({ title }) => {
         image: EIS2,
         buttonText: 'https://www.ebay.com/itm/386449284691?hash=item59fa2c1e53:g:sF8AAOSwjdRlf6pJ'
       },
-      {
-        title: 'Sample Used Mercedes Benz EIS',
-        description: 'Mercedes OEM W204 EZS EIS C200 C230 FILLER, FILLER, FILLER, FILLER, FILLER, SAMPLE,',
-        image: EISsample,
-        buttonText: 'Buy It Now'
-      },
-      // Add more cards as needed
+
     ];
 
     return cards.map((card, index) => (

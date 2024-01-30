@@ -113,7 +113,7 @@ const Navbar = () => {
               <div className="social-list">
                 <a
                   className="youtube"
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/tee.recks.75?mibextid=hu50Ix"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -121,7 +121,7 @@ const Navbar = () => {
                 </a>
                 <a
                   className="Instagram"
-                  href="https://www.instagramcom/"
+                  href="https://www.instagram.com/toprin_auto?igsh=MTJoM3ljbXprd2Ywbw%3D%3D&utm_source=qr"
                   rel="noreferrer"
                   target="_blank"
                 >
